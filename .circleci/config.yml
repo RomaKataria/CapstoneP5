@@ -141,20 +141,3 @@ workflows:
             cluster-name:  udacity-capstone
             requires:
               - create-deployment              
-<<<<<<< HEAD
-     #   - aws-eks/update-container-image:
-            cluster-name: udacity-capstone
-            container-image-updates: 'my-capstone-deployment=leenabhavnani/my-node-app:2.0'
-            get-rollout-status: true
-            record: true
-            requires:
-             - test-deployment
-            resource-name:  deployment/my-capstone-deployment            
-        
-      #  - aws-eks/delete-cluster:
-            cluster-name: udacity-capstone
-            requires:
-              - aws-eks/update-container-image
-=======
-        
->>>>>>> 1ac4e3f (first commit)
