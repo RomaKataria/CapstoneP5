@@ -129,7 +129,7 @@ jobs:
           cluster-name: << parameters.cluster-name >>
           install-kubectl: true
       - kubernetes/create-or-update-resource:
-          get-rollout-status: true
+          get-rollout-status: false
           resource-file-path: deployment.yml
           resource-name: deployment/my-capstone-deployment
           
