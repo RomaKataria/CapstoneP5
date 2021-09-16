@@ -163,18 +163,18 @@ workflows:
             requires:
               - smoke_test
         - create-cluster:
-            cluster-name: udacity-capstone
+            cluster-name: udacity-capstone-p5
             requires:
               - config-image
         - test-cluster:
-            cluster-name: udacity-capstone
+            cluster-name: udacity-capstone-p5
             requires:
               - create-cluster
         - create-deployment:
-            cluster-name:  udacity-capstone
+            cluster-name:  udacity-capstone-p5
             requires:
               - test-cluster
         - test-deployment:
-            cluster-name:  udacity-capstone
+            cluster-name:  udacity-capstone-p5
             requires:
               - create-deployment              
