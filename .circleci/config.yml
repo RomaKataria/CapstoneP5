@@ -177,4 +177,17 @@ workflows:
         - test-deployment:
             cluster-name:  udacity-capstone-p5
             requires:
-              - create-deployment              
+              - create-deployment
+        - aws-eks/update-container-image:
+            cluster-name: udacity-capstone-p5
+            container-image-updates: 'my-capstone-deployment=130987/capstone:2.0'
+            get-rollout-status: true
+            record: true
+            requires:
+             - test-deployment
+            resource-name:  deployment/my-capstone-deployment            
+        
+        - aws-eks/delete-cluster:
+            cluster-name: udacity-capstone-p5
+            requires:
+              - aws-eks/update-container-image
