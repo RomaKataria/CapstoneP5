@@ -13,8 +13,8 @@ spec:
       app: my-capstone-deployment
   strategy:
     rollingUpdate:
-      maxSurge: 50%
-      maxUnavailable: 50%
+     # maxSurge: 50%
+      maxUnavailable: 1
     type: RollingUpdate
   template:
     metadata:
