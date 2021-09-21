@@ -129,7 +129,7 @@ jobs:
           cluster-name: << parameters.cluster-name >>
           install-kubectl: true
       - kubernetes/create-or-update-resource:
-          get-rollout-status: false
+          # get-rollout-status: false
           resource-file-path: deployment.yml
           resource-name: deployment/my-capstone-deployment
           
@@ -181,7 +181,7 @@ workflows:
         - aws-eks/update-container-image:
             cluster-name: udacity-capstone-p5
             container-image-updates: 'my-capstone-deployment=130987/capstone:2.0'
-            get-rollout-status: true
+           # get-rollout-status: true
             record: true
             requires:
              - test-deployment
