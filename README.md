@@ -1,4 +1,4 @@
-In this project you will apply the skills and knowledge which were developed throughout the Cloud DevOps Nanodegree program. These include:
+In this project you will apply the skills and knowledge which were developed throughout the Cloud DevOps Nanodegree program.These include:
 
 Working in AWS
 Using Jenkins or Circle CI to implement Continuous Integration and Continuous Deployment
