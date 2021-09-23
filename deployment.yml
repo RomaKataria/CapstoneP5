@@ -7,14 +7,14 @@ metadata:
   namespace: default
 spec:
   progressDeadlineSeconds: 3600
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: my-capstone-deployment
   strategy:
     rollingUpdate:
-     # maxSurge: 50%
-      maxUnavailable: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
     type: RollingUpdate
   template:
     metadata:
